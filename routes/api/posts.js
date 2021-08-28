@@ -35,14 +35,30 @@ router.get('/toys',(req,res)=>{
         if(!post){
             return res.status(404).json({postsNotFound: "Couldn't find posts."});
         } else {
-            return res.status(200).json(res)
+            return res.status(200).json(post)
         }
     })
     .catch((err)=>{console.error(err)});
 })
-
+//Get Posts by UserID
+router.get('/toys/:id',(req,res)=>{
+    Post.find({userId:req.params.id})
+        .then((toys)=>{
+            res.status(200).json(toys);
+        })
+        .catch((err)=>{
+            res.status(500).json({message:`Error getting toys by uID ${err}`})
+        })
+})
+//Get Posts by Category
+router.get('/toys/:category',(req,res)=>{
+    Post.find({toyCategory:req.params.category})
+        .then((toys)=>{
+            res.status(200).json(toys);
+        })
+        .catch((err)=>{
+            res.status(500).json({message:`Error getting toys by category ${err}`})
+        })
+})
 module.exports = router;
 
-//Get Posts by UserID
-
-//Get Posts by Category
