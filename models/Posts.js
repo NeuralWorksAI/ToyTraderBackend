@@ -11,15 +11,34 @@ const PostSchema = new Schema({
     type: String,
     required: true
   },
-  password: {
-    type: String,
-    required: true
-  },
   posts:[{type: String}],
+
   date: {
     type: Date,
     default: Date.now
-  }
+  },
+  description:{
+    type: String,
+    required: true
+  },
+  toy:{
+    type:String,
+    required: true
+  },
+  
+  toyCategory: {
+    type: String,
+    enum : [     'Action figures',
+      'Animals',
+      'Cars' ,'radio controlled',
+      'Construction toys',
+      'Creative toys',
+      'Dolls',
+      'Educational toys',
+      'Electronic toys',
+    'Generic'],
+    default: 'Generic'
+}
 });
 
 module.exports = User = mongoose.model("users", UserSchema);
