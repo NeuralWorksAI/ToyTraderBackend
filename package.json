@@ -1,0 +1,20 @@
+{
+  "name": "toytraderbackend",
+  "version": "1.0.0",
+  "description": "toy trader backend api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeuralWorksAI/ToyTraderBackend.git"
+  },
+  "author": "arjun devakumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeuralWorksAI/ToyTraderBackend/issues"
+  },
+  "homepage": "https://github.com/NeuralWorksAI/ToyTraderBackend#readme"
+}
