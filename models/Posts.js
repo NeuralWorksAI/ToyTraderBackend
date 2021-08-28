@@ -32,7 +32,7 @@ const PostSchema = new Schema({
     type: String,
     enum: ['Action figures',
       'Animals',
-      'Cars', 'radio controlled',
+      'Cars', 'Radio controlled',
       'Construction toys',
       'Creative toys',
       'Dolls',
@@ -43,4 +43,4 @@ const PostSchema = new Schema({
   }
 });
 
-module.exports = User = mongoose.model("posts", UserSchema);
+module.exports = User = mongoose.model("posts", PostSchema);
