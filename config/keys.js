@@ -1,4 +1,4 @@
-const dotenv = requires("dotenv")
+const dotenv = require("dotenv")
 dotenv.config();
 const DB_PASS = process.env.DB_PASS;
 module.exports = {
