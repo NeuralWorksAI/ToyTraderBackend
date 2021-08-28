@@ -27,11 +27,6 @@ const PostSchema = new Schema({
     type: String,
     required: true
   },
-  toy: {
-    type: String,
-    required: true
-  },
-
   toyCategory: {
     type: String,
     enum: ['Action figures',

@@ -9,8 +9,10 @@ const Post = require('../../models/Posts')
 
 //AddPost POST requeset
 router.post('/add',(req,res)=>{
-    
-    const newPost = {
 
-    }
+    const newPost = new Post({
+        id: req.body.id,
+        title: req.body.title,
+        
+    })
 })
