@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/NeuralWorksAI/ToyTraderBackend/issues"
   },
-  "homepage": "https://github.com/NeuralWorksAI/ToyTraderBackend#readme"
+  "homepage": "https://github.com/NeuralWorksAI/ToyTraderBackend#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }
