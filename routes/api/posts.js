@@ -17,7 +17,7 @@ router.post('/add',(req,res)=>{
         userId: req.body.userId,
         title: req.body.title,
         image: req.body.image,
-        description: req.body.desc,
+        description: req.body.description,
         date: req.body.date,
         toyCategory: req.body.categories
     });
@@ -28,7 +28,7 @@ router.post('/add',(req,res)=>{
 });
 
 //Get All Posts
-router.post('/toys',(req,res)=>{
+router.get('/toys',(req,res)=>{
     Post.find()
     .exec()
     .then(post => {
@@ -40,6 +40,7 @@ router.post('/toys',(req,res)=>{
     })
 })
 
+module.exports = router;
 
 //Get Posts by UserID
 
