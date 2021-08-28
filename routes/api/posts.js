@@ -9,10 +9,38 @@ const Post = require('../../models/Posts')
 
 //AddPost POST requeset
 router.post('/add',(req,res)=>{
-
+    //verify JWT return error
+    //if JWT verified
+    //create new Post model from request body
+    //
     const newPost = new Post({
-        id: req.body.id,
+        userId: req.body.userId,
         title: req.body.title,
-        
+        image: req.body.image,
+        description: req.body.desc,
+        date: req.body.date,
+        toyCategory: req.body.categories
+    });
+    newPost
+        .save()
+        .then(post => res.json(post))
+        .catch(err => console.error(err))
+});
+
+//Get All Posts
+router.post('/toys',(req,res)=>{
+    Post.find()
+    .exec()
+    .then(post => {
+        if(!post){
+            return res.status(404).json({postsNotFound: "Couldn't find posts."});
+        } else {
+            return res.status(200).json(res)
+        }
     })
 })
+
+
+//Get Posts by UserID
+
+//Get Posts by Category
