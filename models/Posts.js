@@ -3,43 +3,49 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const PostSchema = new Schema({
-  userId:{
-      type:String,
-      required: true
+  userId: {
+    type: String,
+    required: true,
   },
   title: {
     type: String,
-    required: true
+    required: true,
   },
   image: {
     type: String,
-    required: true
+    required: true,
   },
 
-  posts: [{
-     type: String }],
+  posts: [
+    {
+      type: String,
+    },
+  ],
 
   date: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   toyCategory: {
     type: String,
-    enum: ['Action figures',
-      'Animals',
-      'Cars', 'Radio controlled',
-      'Construction toys',
-      'Creative toys',
-      'Dolls',
-      'Educational toys',
-      'Electronic toys',
-      'Generic'],
-    default: 'Generic'
-  }
+    enum: [
+      "Action figures",
+      "Stuffed Animals",
+      "Cars",
+      "Radio controlled",
+      "Construction toys",
+      "Creative toys",
+      "Dolls",
+      "Educational toys",
+      "Electronic toys",
+      "Generic",
+    ],
+    default: "Generic",
+  },
 });
 
 module.exports = User = mongoose.model("posts", PostSchema);
