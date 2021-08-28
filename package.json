@@ -19,6 +19,7 @@
   "homepage": "https://github.com/NeuralWorksAI/ToyTraderBackend#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "cors-anywhere": "^0.4.4"
+    "cors-anywhere": "^0.4.4",
+    "dotenv": "^10.0.0"
   }
 }
