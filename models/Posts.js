@@ -11,10 +11,7 @@ const PostSchema = new Schema({
     type: String,
     required: true
   },
-  password: {
-    type: String,
-    required: true
-  },
+
   posts:[{type: String}],
   date: {
     type: Date,
@@ -22,4 +19,4 @@ const PostSchema = new Schema({
   }
 });
 
-module.exports = User = mongoose.model("users", UserSchema);
+module.exports = User = mongoose.model("posts", UserSchema);
