@@ -38,6 +38,7 @@ router.get('/toys',(req,res)=>{
             return res.status(200).json(res)
         }
     })
+    .catch((err)=>{console.error(err)});
 })
 
 module.exports = router;
