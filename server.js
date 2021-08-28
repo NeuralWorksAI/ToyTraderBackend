@@ -34,11 +34,10 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 // Routes
-app.use("/api/users", users);
-app.use((req, res, next) => {
+app.use("/api/users", users,(req,res,next)=>{
     res.header('Access-Control-Allow-Origin', '*');
     next();
-  });
+});
 
 const port = process.env.PORT || 5000;
 
