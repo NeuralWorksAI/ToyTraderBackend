@@ -23,7 +23,7 @@ const PostSchema = new Schema({
     type: String,
     required: true,
   },
-  toyCategory: {
+  category: {
     type: String,
     required: true
     // enum: [
