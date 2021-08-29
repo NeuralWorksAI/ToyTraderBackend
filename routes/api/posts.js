@@ -19,7 +19,7 @@ router.post('/add',(req,res)=>{
         image: req.body.image,
         description: req.body.description,
         date: req.body.date,
-        toyCategory: req.body.categories
+        toyCategory: req.body.category
     });
     newPost
         .save()
@@ -51,7 +51,7 @@ router.get('/toys/:id',(req,res)=>{
         })
 })
 //Get Posts by Category
-router.get('/toys/:category',(req,res)=>{
+router.get('/toys/category/:category',(req,res)=>{
     Post.find({toyCategory:req.params.category})
         .then((toys)=>{
             res.status(200).json(toys);

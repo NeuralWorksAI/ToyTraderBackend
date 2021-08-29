@@ -25,19 +25,20 @@ const PostSchema = new Schema({
   },
   toyCategory: {
     type: String,
-    enum: [
-      "action-figures",
-      "stuffed-animals",
-      "cars",
-      "radio-controlled",
-      "construction-toys",
-      "creative-toys",
-      "dolls",
-      "educational-toys",
-      "electronic-toys",
-      "generic",
-    ],
-    default: "Generic",
+    required: true
+    // enum: [
+    //   "action-figures",
+    //   "stuffed-animals",
+    //   "cars",
+    //   "radio-controlled",
+    //   "construction-toys",
+    //   "creative-toys",
+    //   "dolls",
+    //   "educational-toys",
+    //   "electronic-toys",
+    //   "generic",
+    // ],
+    // default: "generic",
   },
 });
 
