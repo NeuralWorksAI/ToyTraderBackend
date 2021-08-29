@@ -8,7 +8,7 @@ const passport = require("passport");
 const Post = require('../../models/Posts')
 
 //AddPost POST requeset
-router.post('/add',(req,res)=>{
+router.post('/add',async(req,res)=>{
     //verify JWT return error
     //if JWT verified
     //create new Post model from request body
@@ -21,7 +21,7 @@ router.post('/add',(req,res)=>{
         date: req.body.date,
         toyCategory: req.body.category
     });
-    newPost
+    await newPost
         .save()
         .then(post => res.json(post))
         .catch(err => console.error(err))
