@@ -44,20 +44,20 @@ router.get('/toys',(req,res)=>{
 router.get('/toys/:id',(req,res)=>{
     Post.find({userId:req.params.id})
         .then((toys)=>{
-            res.status(200).json(toys);
+            return res.status(200).json(toys);
         })
         .catch((err)=>{
-            res.status(500).json({message:`Error getting toys by uID ${err}`})
+            return res.status(500).json({message:`Error getting toys by uID ${err}`})
         })
 })
 //Get Posts by Category
 router.get('/toys/category/:category',(req,res)=>{
     Post.find({toyCategory:req.params.category})
         .then((toys)=>{
-            res.status(200).json(toys);
+            return res.status(200).json(toys);
         })
         .catch((err)=>{
-            res.status(500).json({message:`Error getting toys by category ${err}`})
+            return res.status(500).json({message:`Error getting toys by category ${err}`})
         })
 })
 module.exports = router;
